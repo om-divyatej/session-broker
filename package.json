@@ -1,0 +1,19 @@
+{
+  "name": "session-broker",
+  "version": "0.1.0",
+  "description": "npx launcher for session-broker (runs via uvx)",
+  "license": "MIT",
+  "bin": {
+    "session-broker": "./bin/session-broker.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/om-divyatej/session-broker.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

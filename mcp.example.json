@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "session-broker": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/om-divyatej/session-broker",
+        "session-broker"
+      ]
+    }
+  }
+}
