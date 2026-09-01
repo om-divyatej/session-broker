@@ -1,7 +1,7 @@
 {
   "name": "session-broker",
   "version": "0.1.0",
-  "description": "npx launcher for session-broker (runs via uvx)",
+  "description": "Local MCP: agents sign into websites without seeing your password. npx self-bootstraps uv.",
   "license": "MIT",
   "bin": {
     "session-broker": "./bin/session-broker.js"

@@ -23,11 +23,11 @@ def _err(e: httpx.HTTPStatusError) -> str:
 
 @mcp.tool()
 def sign_in(name: str, url: str) -> str:
-    """Open a real browser so the user can log into a website.
-
-    The agent never sees the password. `name` is a durable session id
-    (e.g. "western-digital"). After the user finishes logging in, you MUST
-    call complete_sign_in before browsing.
+    """Open the user's real installed browser (Chrome, Brave, Arc, Edge, …) with
+    their existing profile so they are already logged in. `name` is just a label.
+    Chromium locks the profile: if that browser is already running, ask them to
+    quit it, then retry. After the signed-in page is visible, call complete_sign_in.
+    Never ask for a password. Safari cannot be driven this way.
     """
     try:
         r = http.post(f"/sessions/{name}/sign-in", json={"url": url})
